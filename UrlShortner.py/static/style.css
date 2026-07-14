@@ -1,0 +1,196 @@
+/* ===============================
+   Smart URL Shortener
+   Developed by Ayush Kumar
+================================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(135deg,#6dd5ed,#2193b0);
+
+    min-height:100vh;
+
+}
+
+/* ===============================
+   Navbar
+================================ */
+
+.navbar{
+
+    padding:15px 0;
+
+}
+
+.navbar-brand{
+
+    font-size:24px;
+
+    font-weight:600;
+
+}
+
+/* ===============================
+   Card
+================================ */
+
+.card{
+
+    border:none;
+
+    border-radius:20px;
+
+    box-shadow:0 12px 35px rgba(0,0,0,.15);
+
+    animation:fade .6s ease;
+
+    transition:.3s;
+
+}
+
+.card:hover{
+
+    transform:translateY(-5px);
+
+}
+
+/* ===============================
+   Inputs
+================================ */
+
+.form-control{
+
+    border-radius:12px;
+
+    padding:14px;
+
+    font-size:16px;
+
+    border:1px solid #ced4da;
+
+}
+
+.form-control:focus{
+
+    border-color:#0d6efd;
+
+    box-shadow:0 0 10px rgba(13,110,253,.25);
+
+}
+
+/* ===============================
+   Buttons
+================================ */
+
+.btn{
+
+    border-radius:12px;
+
+    padding:12px;
+
+    font-weight:600;
+
+    transition:.3s;
+
+}
+
+.btn:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ===============================
+   Labels
+================================ */
+
+.form-label{
+
+    font-weight:600;
+
+}
+
+/* ===============================
+   Alert
+================================ */
+
+.alert{
+
+    border-radius:12px;
+
+}
+
+/* ===============================
+   Footer
+================================ */
+
+footer{
+
+    color:white;
+
+    text-align:center;
+
+    margin-top:60px;
+
+    padding:20px;
+
+    font-size:15px;
+
+}
+
+footer hr{
+
+    border-color:rgba(255,255,255,.3);
+
+}
+
+/* ===============================
+   Animation
+================================ */
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ===============================
+   Responsive
+================================ */
+
+@media(max-width:768px){
+
+    .card{
+
+        padding:25px !important;
+
+    }
+
+    h1{
+
+        font-size:30px;
+
+    }
+
+}

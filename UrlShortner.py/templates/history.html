@@ -1,0 +1,88 @@
+{% extends 'base.html' %}
+
+{% block title %}History{% endblock %}
+
+{% block content %}
+
+<div class="card shadow-lg border-0 p-4">
+
+    <h2 class="mb-4 text-center">
+
+        <i class="fa-solid fa-clock-rotate-left text-primary"></i>
+
+        URL History
+
+    </h2>
+
+    {% if urls %}
+
+    <div class="table-responsive">
+
+        <table class="table table-hover table-bordered">
+
+            <thead class="table-primary">
+
+                <tr>
+
+                    <th>Original URL</th>
+                    <th>Short URL</th>
+                    <th>Clicks</th>
+                    <th>Created At</th>
+                    <th>Actions</th>
+
+                </tr>
+
+            </thead>
+
+            <tbody>
+
+            {% for url in urls %}
+
+                <tr>
+
+                    <td>{{ url[0] }}</td>
+
+                    <td>
+                        <a href="/{{ url[2] }}" target="_blank">
+                            {{ request.host_url }}{{ url[2] }}
+                        </a>
+                    </td>
+
+                    <td>{{ url[3] }}</td>
+
+                    <td>{{ url[4] }}</td>
+
+                    <td>
+
+                        <a href="/delete/{{ url[0] }}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this URL?');">
+
+                            <i class="fa-solid fa-trash"></i> 
+                            Delete
+
+                        </a>
+
+                    </td>
+
+                </tr>
+
+            {% endfor %}
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    {% else %}
+
+        <div class="alert alert-warning text-center">
+
+            No URLs found.
+
+        </div>
+
+    {% endif %}
+
+</div>
+
+{% endblock %}
